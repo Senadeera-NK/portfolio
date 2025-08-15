@@ -1,0 +1,13 @@
+---
+import { siteConfig } from "../config.js";
+---
+
+<section id="about" class="container">
+  <h2>About Me</h2>
+  <p>{siteConfig.aboutMe}</p>
+  <div class="skills">
+    {siteConfig.skills.map(skill => (
+      <span>{skill}</span>
+    ))}
+  </div>
+</section>
