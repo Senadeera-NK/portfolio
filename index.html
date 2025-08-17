@@ -11,64 +11,72 @@
   <!-- Navbar -->
   <nav class="bg-white shadow-md fixed w-full top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 id="site-name" class="text-2xl font-bold"></h1>
-      <div class="space-x-6">
-        <a href="#about" class="hover:text-blue-500">About</a>
-        <a href="#projects" class="hover:text-blue-500">Projects</a>
-        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      <h1 id="site-name" class="text-2xl font-bold text-blue-600"></h1>
+      <div class="space-x-6 font-medium">
+        <a href="#about" class="hover:text-blue-500 transition">About</a>
+        <a href="#skills" class="hover:text-blue-500 transition">Skills</a>
+        <a href="#experience" class="hover:text-blue-500 transition">Experience</a>
+        <a href="#projects" class="hover:text-blue-500 transition">Projects</a>
+        <a href="#education" class="hover:text-blue-500 transition">Education</a>
+        <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center">
-    <h2 id="hero-title" class="text-4xl sm:text-6xl font-extrabold mb-4"></h2>
+  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center px-6">
+    <h2 id="hero-title" class="text-4xl sm:text-6xl font-extrabold mb-6"></h2>
     <p id="hero-desc" class="text-lg sm:text-2xl max-w-2xl"></p>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 container mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-6 text-center"></h3>
-    <p id="about-text" class="text-lg leading-relaxed text-gray-700 text-center max-w-2xl mx-auto"></p>
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-8 text-blue-600">About Me</h3>
+      <p id="about-text" class="text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto"></p>
+    </div>
   </section>
 
   <!-- Skills -->
-   <section id="skills" class="py-20 bg-gray-100">
-   <div class="container mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-10">Skills</h3>
+  <section id="skills" class="py-20 bg-blue-50">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-10 text-blue-600">Skills</h3>
       <div id="skills-list" class="flex flex-wrap justify-center gap-3"></div>
     </div>
-   </section>
+  </section>
 
   <!-- Experience -->
-   <section id="experience" class="py-20">
-   <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-10 text-center">Experience</h3>
-      <div id="experience-list" class="space-y-6 max-w-3xl mx-auto"></div>
-    </div>
-   </section>
-
-     <!-- Projects -->
-  <section id="projects" class="py-20 bg-gray-100">
+  <section id="experience" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-10 text-center">Projects</h3>
-      <div id="projects-list" class="grid md:grid-cols-3 gap-8"></div>
+      <h3 class="text-3xl font-bold mb-10 text-center text-blue-600">Experience</h3>
+      <div id="experience-list" class="space-y-6 max-w-4xl mx-auto"></div>
     </div>
   </section>
-  
-    <!-- Education -->
-  <section id="education" class="py-20">
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-blue-50">
     <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-10 text-center">Education</h3>
+      <h3 class="text-3xl font-bold mb-10 text-center text-blue-600">Projects</h3>
+      <!-- Horizontal Scrollable Container -->
+      <div id="projects-list" class="flex space-x-6 overflow-x-auto pb-4 snap-x snap-mandatory">
+        <!-- Project cards will be appended here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-10 text-center text-blue-600">Education</h3>
       <div id="education-list" class="space-y-6 max-w-3xl mx-auto"></div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-gray-100">
+  <section id="contact" class="py-20 bg-blue-50">
     <div class="container mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
-      <div id="contact-links" class="flex justify-center space-x-6 text-lg"></div>
+      <h3 class="text-3xl font-bold mb-6 text-blue-600">Get in Touch</h3>
+      <div id="contact-links" class="flex flex-wrap justify-center space-x-6 text-lg font-medium"></div>
     </div>
   </section>
 
@@ -78,70 +86,70 @@
   </footer>
 
   <!-- Load Config -->
-   <script type="module">
+  <script type="module">
     import {siteConfig} from './siteConfig.js';
 
     // Hero + navbar
     document.getElementById("site-name").innerText = siteConfig.name;
-    document.getElementById("hero-title").innerText = `Hi, Im ${siteConfig.name}`;
+    document.getElementById("hero-title").innerText = `Hi, I'm ${siteConfig.name}`;
     document.getElementById("hero-desc").innerText = siteConfig.description;
 
     // About
     document.getElementById("about-text").innerText = siteConfig.aboutMe;
 
-    //skills
+    // Skills
     const skillsDiv = document.getElementById("skills-list");
     siteConfig.skills.forEach(skill=>{
         const span = document.createElement("span");
-        span.className = "px-4 py-2 bg-white shadow rounded-full text-gray-700 font-medium";
+        span.className = "px-4 py-2 bg-white shadow rounded-full text-gray-700 font-medium hover:bg-blue-100 transition";
         span.innerText = skill;
         skillsDiv.appendChild(span);
     });
 
-    //Experience
+    // Experience
     const expDiv = document.getElementById("experience-list");
     siteConfig.experience.forEach(exp=>{
         const div = document.createElement("div");
-        div.className = "bg-white rounded-2xl shadow p-6";
+        div.className = "bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition";
         div.innerHTML=`
-            <h4 class="text-xl font-semibold">${exp.title}</h4>
+            <h4 class="text-xl font-semibold text-blue-600">${exp.title}</h4>
             <p class="text-gray-600">${exp.company} • ${exp.dateRange}</p>
-            <ul class="list-disc list-inside text-gray-700 mt-2">
-            ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
+            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+              ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
             </ul>
         `;
         expDiv.appendChild(div);
     });
 
-    //Projects
+    // Projects (scrollable)
     const projDiv = document.getElementById("projects-list");
     siteConfig.projects.forEach(proj=>{
         const div = document.createElement("div");
-        div.className = "bg-white rounded-2xl shadow p-6";
+        div.className = "bg-white rounded-2xl shadow-lg p-6 min-w-[300px] max-w-sm snap-center hover:shadow-xl transition";
         div.innerHTML = `
-            <h4 class="text-xl font-semibold">${proj.name}</h4>
+            <h4 class="text-xl font-semibold text-blue-600">${proj.name}</h4>
             <p class="text-gray-600 mb-4">${proj.description}</p>
             <a href="${proj.link}" target="_blank" class="text-blue-600 font-semibold hover:underline">View Project</a>
         `;
         projDiv.appendChild(div);
     });
 
-     // Education
+    // Education
     const eduDiv = document.getElementById("education-list");
     siteConfig.education.forEach(edu => {
       const div = document.createElement("div");
-      div.className = "bg-white rounded-2xl shadow p-6";
+      div.className = "bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition";
       div.innerHTML = `
-        <h4 class="text-xl font-semibold">${edu.school}</h4>
+        <h4 class="text-xl font-semibold text-blue-600">${edu.school}</h4>
         <p class="text-gray-600">${edu.degree} • ${edu.dateRange}</p>
-        <ul class="list-disc list-inside text-gray-700 mt-2">
+        <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
           ${edu.achievements.map(a => `<li>${a}</li>`).join("")}
         </ul>
       `;
       eduDiv.appendChild(div);
     });
 
-    //Contact
+    // Contact
     const contactDiv = document.getElementById("contact-links");
     for(const[platform, url] of Object.entries(siteConfig.social)){
         const a = document.createElement("a");
@@ -152,9 +160,10 @@
         contactDiv.appendChild(a);
     }
 
+    // Footer
     document.getElementById("footer-year").innerText = new Date().getFullYear();
     document.getElementById("footer-name").innerText = siteConfig.name;
-   </script>
+  </script>
 
 </body>
 </html>

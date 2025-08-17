@@ -2,7 +2,7 @@
 export const siteConfig = {
   name: "Nanduni Kaveesha Senadeera",
   title: "Aspiring Software Engineer",
-  description: "Computer Science graduate skilled in full-stack development, machine learning, and automation — passionate about building scalable and impactful software solutions.",
+  description: "Computer Science graduate skilled in full-stack development, machine learning, and passionate about building scalable and impactful software solutions.",
   accentColor: "#4f639aff",
   social: {
     email: "naksathaudage2000@gmail.com",
