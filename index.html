@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Your Name</h1>
+      <div class="space-x-6">
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#projects" class="hover:text-blue-500">Projects</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center">
+    <h2 class="text-4xl sm:text-6xl font-extrabold mb-4">Hi, I’m Your Name 👋</h2>
+    <p class="text-lg sm:text-2xl max-w-2xl">A passionate developer who loves building things with code.</p>
+    <a href="#projects" class="mt-6 px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow hover:bg-gray-100">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 container mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-6 text-center">About Me</h3>
+    <p class="text-lg leading-relaxed text-gray-700 text-center max-w-2xl mx-auto">
+      I’m a developer with experience in Python, JavaScript, and building full-stack applications.
+      Currently exploring cloud, AI, and system design while working on exciting personal projects.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-10 text-center">Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Project Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <h4 class="text-xl font-semibold mb-2">Project One</h4>
+          <p class="text-gray-600 mb-4">Short description of your project goes here.</p>
+          <a href="https://github.com/your-username/project-one" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
+        </div>
+
+        <!-- Project Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <h4 class="text-xl font-semibold mb-2">Project Two</h4>
+          <p class="text-gray-600 mb-4">Another project description here.</p>
+          <a href="https://github.com/your-username/project-two" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
+        </div>
+
+        <!-- Project Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <h4 class="text-xl font-semibold mb-2">Project Three</h4>
+          <p class="text-gray-600 mb-4">One more project showcase.</p>
+          <a href="https://github.com/your-username/project-three" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 container mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
+    <p class="text-lg text-gray-700 mb-6">I’m open to new opportunities and collaborations.</p>
+    <a href="mailto:your.email@example.com" class="px-6 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:bg-blue-700">
+      Say Hello
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>© 2025 Your Name. Built with ❤️ using GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>
