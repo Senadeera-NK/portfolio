@@ -22,64 +22,139 @@
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center">
-    <h2 class="text-4xl sm:text-6xl font-extrabold mb-4">Hi, I’m Your Name 👋</h2>
-    <p class="text-lg sm:text-2xl max-w-2xl">A passionate developer who loves building things with code.</p>
-    <a href="#projects" class="mt-6 px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow hover:bg-gray-100">View My Work</a>
+    <h2 id="hero-title" class="text-4xl sm:text-6xl font-extrabold mb-4"></h2>
+    <p id="hero-desc" class="text-lg sm:text-2xl max-w-2xl"></p>
   </section>
 
   <!-- About Section -->
   <section id="about" class="py-20 container mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-6 text-center">About Me</h3>
-    <p class="text-lg leading-relaxed text-gray-700 text-center max-w-2xl mx-auto">
-      I’m a developer with experience in Python, JavaScript, and building full-stack applications.
-      Currently exploring cloud, AI, and system design while working on exciting personal projects.
-    </p>
+    <h3 class="text-3xl font-bold mb-6 text-center"></h3>
+    <p id="about-text" class="text-lg leading-relaxed text-gray-700 text-center max-w-2xl mx-auto"></p>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Skills -->
+   <section id="skills" class="py-20 bg-gray-100">
+   <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-10">Skills</h3>
+      <div id="skills-list" class="flex flex-wrap justify-center gap-3"></div>
+    </div>
+   </section>
+
+  <!-- Experience -->
+   <section id="experience" class="py-20">
+   <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-10 text-center">Experience</h3>
+      <div id="experience-list" class="space-y-6 max-w-3xl mx-auto"></div>
+    </div>
+   </section>
+
+     <!-- Projects -->
   <section id="projects" class="py-20 bg-gray-100">
     <div class="container mx-auto px-6">
       <h3 class="text-3xl font-bold mb-10 text-center">Projects</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        
-        <!-- Project Card -->
-        <div class="bg-white rounded-2xl shadow-lg p-6">
-          <h4 class="text-xl font-semibold mb-2">Project One</h4>
-          <p class="text-gray-600 mb-4">Short description of your project goes here.</p>
-          <a href="https://github.com/your-username/project-one" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
-        </div>
-
-        <!-- Project Card -->
-        <div class="bg-white rounded-2xl shadow-lg p-6">
-          <h4 class="text-xl font-semibold mb-2">Project Two</h4>
-          <p class="text-gray-600 mb-4">Another project description here.</p>
-          <a href="https://github.com/your-username/project-two" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
-        </div>
-
-        <!-- Project Card -->
-        <div class="bg-white rounded-2xl shadow-lg p-6">
-          <h4 class="text-xl font-semibold mb-2">Project Three</h4>
-          <p class="text-gray-600 mb-4">One more project showcase.</p>
-          <a href="https://github.com/your-username/project-three" class="text-blue-600 font-semibold hover:underline">View on GitHub</a>
-        </div>
-        
-      </div>
+      <div id="projects-list" class="grid md:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+  
+    <!-- Education -->
+  <section id="education" class="py-20">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-10 text-center">Education</h3>
+      <div id="education-list" class="space-y-6 max-w-3xl mx-auto"></div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 container mx-auto px-6 text-center">
-    <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
-    <p class="text-lg text-gray-700 mb-6">I’m open to new opportunities and collaborations.</p>
-    <a href="mailto:your.email@example.com" class="px-6 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:bg-blue-700">
-      Say Hello
-    </a>
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
+      <div id="contact-links" class="flex justify-center space-x-6 text-lg"></div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400 py-6 text-center">
-    <p>© 2025 Your Name. Built with ❤️ using GitHub Pages.</p>
+    <p>© <span id="footer-year"></span> <span id="footer-name"></span>. Built with ❤️ using GitHub Pages.</p>
   </footer>
+
+  <!-- Load Config -->
+   <script type="module">
+    import {siteConfig} from './siteConfig.js';
+
+    // Hero + navbar
+    document.getElementById("site-name").innerText = siteConfig.name;
+    document.getElementById("hero-title").innerText = `Hi, I'm ${siteConfig.name}`;
+    document.getElementById("hero-desc").innerText = siteConfig.description;
+
+    // About
+    document.getElementById("about-text").innerText = siteConfig.aboutMe;
+
+    //skills
+    const skillsDiv = document.getElementById("skills-list");
+    siteConfig.skills.forEach(skills=>{
+        const span = document.createElement("span");
+        span.className = "px-4 py-2 bg-white shadow rounded-full text-gray-700 font-medium";
+        span.innerText = skill;
+        skillsDiv.appendChild(span);
+    });
+
+    //Experience
+    const expDiv = document.getElementById("experience-list");
+    siteConfig.experience.forEach(exp=>{
+        const div = document.createElement("div");
+        div.className = "bg-white rounded-2xl shadow p-6";
+        div.innerHTML=`
+            <h4 class="text-xl font-semibold">${exp.title}</h4>
+            <p class="text-gray-600">${exp.company} • ${exp.dateRange}</p>
+            <ul class="list-disc list-inside text-gray-700 mt-2">
+            ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
+            </ul>
+        `;
+        expDiv.appendChild(div);
+    });
+
+    //Projects
+    const projDiv = document.getElementById("project-list");
+    siteConfig.projects.forEach(proj=>{
+        const div = document.createElement("div");
+        div.className = "bg-white rounded 2xl shadow p-6";
+        div.innerHTML = `
+            <h4 class="text-xl font-semibold">${proj.name}</h4>
+            <p class="text-gray-600 mb-4">${proj.description}</p>
+            <a href="${proj.link}" target="_blank" class="text-blue-600 font-semibold hover:underline">View Project</a>
+        `;
+        projDiv.appendChild(div);
+    });
+
+     // Education
+    const eduDiv = document.getElementById("education-list");
+    siteConfig.education.forEach(edu => {
+      const div = document.createElement("div");
+      div.className = "bg-white rounded-2xl shadow p-6";
+      div.innerHTML = `
+        <h4 class="text-xl font-semibold">${edu.school}</h4>
+        <p class="text-gray-600">${edu.degree} • ${edu.dateRange}</p>
+        <ul class="list-disc list-inside text-gray-700 mt-2">
+          ${edu.achievements.map(a => `<li>${a}</li>`).join("")}
+        </ul>
+      `;
+      eduDiv.appendChild(div);
+    });
+
+    //Contact
+    const contactDiv = document.getElementById("contact-links");
+    for(const[platform, url] of Object.entries(siteConfig.social)){
+        const a = document.createElement("a");
+        a.href = platform === "email" ? `mailto:${url}`:url;
+        a.target = "_blank";
+        a.className = 'text-blue-600 hover:underline';
+        a.innerTex = platform.charAt(0).toUpperCase() + platform.slice(1);
+        contactDiv.appendChild(a);
+    }
+
+    document.getElementById("footer-year").innerText = new Date().getFullYear();
+    document.getElementById("footer-name").innerText = siteConfig.name;
+   </script>
 
 </body>
 </html>
