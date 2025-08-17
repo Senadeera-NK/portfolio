@@ -3,49 +3,70 @@ export const siteConfig = {
   name: "Nanduni Kaveesha Senadeera",
   title: "Aspiring Software Engineer",
   description: "Welcome to the portfolio site",
-  accentColor: "#1d4ed8",
+  accentColor: "#4f639aff",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/your-username",
-    medium: "https://medium.com/@your-medium",
+    email: "naksathaudage2000@gmail.com",
+    linkedin: "https://www.linkedin.com/in/s-a-nanduni-kaveesha-senadeera/",
+    github: "https://github.com/Senadeera-NK",
+    medium: "https://medium.com/@naksathaudage2000",
   },
   aboutMe:
-    "I’m a developer with experience in Python, JavaScript, and building full-stack applications. Passionate about AI, business, and technology.",
-  skills: ["Python", "JavaScript", "FastAPI", "React", "SQL"],
+    "I’m a Computer Science graduate passionate about building reliable and scalable software solutions. My experience spans frontend and backend development, software quality assurance, and automation workflows. I enjoy working with modern web technologies, designing REST APIs, and exploring data-driven solutions that solve real-world problems.With a strong foundation in object-oriented programming and a quick ability to adapt to new tech stacks, I thrive in collaborative environments where I can both contribute and learn. Beyond coding, I’m motivated by the challenge of creating clean, efficient systems that make life easier for users",
+  skills: ["HTML", "CSS3", "Python", "JavaScript", "FastAPI", "React", "SQL"],
 
   projects: [
     {
-      name: "NameSense",
-      description: "AI-driven file classification and renaming tool.",
-      link: "https://github.com/your-username/namesense",
-      skills: ["Python", "OCR", "FastAPI"],
+      name: "Deepfake Audio Detection",
+      description: "Developed a machine learning model in TensorFlow to detect synthetically generated audio, enhancing digital security. The system included custom data preprocessing pipelines, classification algorithms, and a prototype demo interface, showcasing end-to-end ML integration and deployment skills.",
+      link: "https://github.com/topics/audio-deepfake-detection",
+      skills: ["Python", "TensorFlow"],
     },
     {
-      name: "To-Do List App",
-      description: "Simple React-based to-do list for productivity.",
-      link: "https://github.com/your-username/todo-list",
-      skills: ["React", "TailwindCSS"],
+      name: "Event Planning Web Application",
+      description: "Currently building a full-stack event management platform with React.js, FastAPI, and Supabase. The application enables user accounts, event categories, and cart functionality, while leveraging cloud tools like GitHub and Gitpod for collaborative development and scalability.",
+      link: "https://github.com/Senadeera-NK/JZ_EventPlanner-Latests-",
+      skills: ["FastAPI", "Supabase(PostreSQL)", "React.js", "GitHub", "Gitpod", "Codespace"],
+    },
+    {
+      name: "Iris Flower Classifier System",
+      description: "Designed a predictive model in Scikit-learn to classify iris flower species with strong accuracy. The project integrates Python, Pandas, and Matplotlib for model training, validation, and visualization, while providing lightweight backend services for handling real-time prediction requests.",
+      link: "https://github.com/Senadeera-NK/Iris-Flowers-Classifier",
+      skills: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
+    },
+    ,
+    {
+      name: "Intelligent File Classifier & Rename System",
+      description: "Building an AI-powered tool that automates file classification and renaming using OCR and NLP. The system extracts text from documents, interprets context, and stores metadata in SQL, streamlining repetitive file management tasks through FastAPI-based backend services.",
+      link: "https://github.com/Senadeera-NK/NameSense",
+      skills: ["Python", "OCR", "NLP", "SQL", "FastAPI"],
     },
   ],
 
   experience: [
     {
-      company: "Promptus",
+      company: "Promptus - Dubai(UAE)",
       title: "AI, QA & Software Support",
-      dateRange: "2023 – Present",
+      dateRange: "April, 2025 – June, 2025",
       bullets: [
-        "Coordinated business operations and streamlined workflows.",
-        "Collaborated with cross-functional teams for growth strategies.",
+        "Conduct comprehensive functionality, performance, and UI/UX testing on AI-generated microsites, ensuring responsive layouts and intuitive navigation.",
+        "Identified and documented usability issues, collaborating with developers to enhance the end-user experience.",
+        "Assisted in refining bug reporting workflows to improve turnaround time for fixes.",
+        "Created internal user documentation to guide both technical and non-technical teams.",
+        "Provided valuable feedback on frontend design choices to align with branding and accessibility standards."
+
       ],
     },
     {
-      company: "Company B",
-      title: "HR Administrator",
-      dateRange: "2022 – 2023",
+      company: "LOLC Technologies - Colombo Sri Lanka",
+      title: "Intern -QA, UIPath & RPA Developer",
+      dateRange: "2021 – 2022",
       bullets: [
-        "Managed recruitment and employee engagement initiatives.",
-        "Supported HR operations and payroll processing.",
+        "Supported quality assurance activities for enterprise software solutions.",
+        "Learned UIPath automation techniques for repetitive business processes.",
+        "Assisted in executing backend and frontend test cases.",
+        "Maintained QA documentation and test reports.",
+        "Observed the complete software development lifecycle in a corporate environment."
+
       ],
     },
   ],
@@ -56,8 +77,8 @@ export const siteConfig = {
       degree: "BSc (Hons) in Computer Science",
       dateRange: "2019 – 2023",
       achievements: [
-        "Completed a full-stack ML project for final year.",
-        "Member of Computer Science Club.",
+        "Graduated with Second Upper Class Honours (GPA: 3.7/4.0)",
+        "Final year project: 'Deepfake Audio Detection' using Tensorflow and Python",
       ],
     },
   ],
