@@ -1,8 +1,8 @@
 // siteConfig.js
 export const siteConfig = {
-  name: "Your Name",
+  name: "Nanduni Kaveesha Senadeera",
   title: "Aspiring Software Engineer",
-  description: "Portfolio website of Your Name",
+  description: "Welcome to the portfolio site",
   accentColor: "#1d4ed8",
   social: {
     email: "your-email@example.com",
